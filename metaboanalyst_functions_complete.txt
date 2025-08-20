@@ -1,0 +1,2254 @@
+MetaboAnalystR项目R文件夹中所有.R文件的函数列表
+================================================================================ 
+总计 96 个R文件
+
+文件:  batch_effect_utils.R 
+-------------------------- 
+  1. add_predvars_and_dataClasses
+  2. aic
+  3. ANCOVA
+  4. ANCOVA_doBC
+  5. ANCOVA_evaluatePCA
+  6. append_df
+  7. as_tibble_matrix
+  8. cbindlist
+  9. CCMN2
+ 10. col_names
+ 11. combat
+ 12. crch
+ 13. crch.control
+ 14. crch.fit
+ 15. CreateSemiTransColors
+ 16. crossEva
+ 17. crossval
+ 18. decorana
+ 19. dev.resids
+ 20. dmu.deta
+ 21. do.text
+ 22. eig_norm1
+ 23. eig_norm2
+ 24. EigenMS
+ 25. error
+ 26. evaluate.dis
+ 27. expand_offset
+ 28. fast.svd
+ 29. fitfun
+ 30. FUN
+ 31. fun.fit
+ 32. fun.predict
+ 33. GetAllBatchNames
+ 34. glogfit
+ 35. gradfun
+ 36. hessfun
+ 37. imodwt
+ 38. imputation
+ 39. imputation_internal
+ 40. isWholeNumber
+ 41. jadeCummulantMatrices
+ 42. linkfun
+ 43. linkinv
+ 44. loglik
+ 45. loglikfun
+ 46. makeLMFormula
+ 47. model.evaluation
+ 48. modwt
+ 49. mu.eta
+ 50. myLoessFit
+ 51. naiveRandRUV
+ 52. negative.binomial
+ 53. NOMIS
+ 54. NormalizeRUVRand
+ 55. normFact
+ 56. nsmall.svd
+ 57. opt
+ 58. pcaMuffle
+ 59. PerformBatchCorrection
+ 60. PerformSignalDriftCorrection
+ 61. plot.eigentrends
+ 62. plot.sample.dist
+ 63. plot.sample.trend
+ 64. plotNorValue
+ 65. PlotPCA.overview
+ 66. positive.svd
+ 67. pseudoinverse
+ 68. psmall.svd
+ 69. QC_RLSC
+ 70. qmf
+ 71. R2
+ 72. Read.BatchDataBC
+ 73. Read.BatchDataTB
+ 74. Read.SignalDriftData
+ 75. readDataTable2
+ 76. recomp
+ 77. reconstruct_tibble
+ 78. ResetBatchData
+ 79. residuals.DGEGLM
+ 80. rjd
+ 81. runFit1
+ 82. runFit2
+ 83. RUV_2
+ 84. RUV_random
+ 85. RUVg
+ 86. RUVg_cor
+ 87. RUVr
+ 88. RUVr_cor
+ 89. RUVRand
+ 90. RuvRandIter
+ 91. RUVs
+ 92. RUVs_cor
+ 93. select.bl14
+ 94. select.bl20
+ 95. select.bs3.1
+ 96. select.d16
+ 97. select.d4
+ 98. select.d6
+ 99. select.d8
+100. select.fk14
+101. select.fk22
+102. select.fk4
+103. select.fk6
+104. select.fk8
+105. select.haar
+106. select.la16
+107. select.la20
+108. select.la8
+109. select.mb16
+110. select.mb24
+111. select.mb4
+112. select.mb8
+113. select.w4
+114. simfun
+115. spread
+116. standardsFit
+117. standardsPred
+118. sva.id
+119. ToSemiTransParent
+120. tuneSpline
+121. unbiased_stICA
+122. valideta
+123. validmu
+124. variance
+125. warning
+126. wave.filter
+127. WaveICA
+
+文件:  biomarker_utils.R 
+----------------------- 
+  1. CalculateFeatureRanking
+  2. ComputeAverageCurve
+  3. ComputeHighLow
+  4. ComputeKmeanClusters
+  5. ContainNewSamples
+  6. createCVset
+  7. do.CVTest.LRmodel
+  8. doLogisticRegMdl
+  9. error
+ 10. genLREquation
+ 11. Get.Accuracy
+ 12. Get.Fisher
+ 13. Get.Fstat
+ 14. Get.pAUC
+ 15. Get.pred
+ 16. Get.rpart.summary
+ 17. Get.VIP
+ 18. GetAccuracyInfo
+ 19. GetBestModelIndex
+ 20. GetCIs
+ 21. GetCurrentConfMat
+ 22. GetCurrentConfMatTest
+ 23. GetFeatureNumbers
+ 24. GetFeatureRankingMat
+ 25. GetImpColNames
+ 26. GetImpFeatureMat
+ 27. GetImpHighLow
+ 28. GetImpRowNames
+ 29. GetImpValues
+ 30. GetLassoFreqNames
+ 31. GetLassoFreqs
+ 32. GetLR_clsLbl
+ 33. GetLR_clsLblNew
+ 34. GetLRConvergence
+ 35. GetLREquation
+ 36. GetLRmodelTable
+ 37. GetLRperformTable
+ 38. GetLRthreshold
+ 39. GetMeanROC
+ 40. GetModelNames
+ 41. GetNewSampleGrps
+ 42. GetNewSampleNames
+ 43. GetNewSampleNameVec
+ 44. GetNewSampleProbs
+ 45. GetROC.coords
+ 46. GetROCLassoFreq
+ 47. GetRocSigFileName
+ 48. GetROCTtestP
+ 49. GetTrainTestSplitMat
+ 50. GetUnivRankedFeatureNames
+ 51. logisticReg
+ 52. MergeDuplicates
+ 53. multi.stat
+ 54. Perform.Permut
+ 55. Perform.UnivROC
+ 56. PerformCV.explore
+ 57. PerformCV.test
+ 58. Plot.Permutation
+ 59. PlotAccuracy
+ 60. PlotDetailROC
+ 61. PlotImpBiomarkers
+ 62. PlotProbView
+ 63. PlotProbViewTest
+ 64. PlotROC
+ 65. PlotROC.LRmodel
+ 66. PlotROCTest
+ 67. PlotRocUnivBoxPlot
+ 68. PlotTestAccuracy
+ 69. Predict.class
+ 70. PreparePermResult
+ 71. PrepareROCData
+ 72. PrepareROCData_old
+ 73. PrepareROCDetails
+ 74. RankFeatures
+ 75. SetAnalysisMode
+ 76. SetCurrentGroups
+ 77. SetCustomData
+ 78. sqr
+ 79. UpdateKmeans
+
+文件:  depends_refs.R 
+-------------------- 
+  1. all_identical
+  2. is.string
+  3. melt
+  4. melt_check
+  5. melt_dataframe
+  6. melt.array
+  7. melt.data.frame
+  8. melt.default
+  9. melt.list
+ 10. normalize_melt_arguments
+ 11. pull_as_location2
+ 12. var.convert
+ 13. vars_pull
+
+文件:  dose_response_deanal.R 
+---------------------------- 
+  1. ComputeContDoseLimmaResTable
+  2. ComputeDoseLimmaResTable
+  3. GetDoseDEColumns
+  4. GetDoseDEMat
+  5. GetDoseDERows
+  6. GetDoseDnIDs
+  7. GetDoseDnMat
+  8. GetDoseUnsigIDs
+  9. GetDoseUnsigMat
+ 10. GetDoseUpIDs
+ 11. GetDoseUpMat
+ 12. GetSigTable.Dose
+ 13. GetUpdatedClsType
+ 14. PerformDoseDEAnal
+ 15. PlotDoseVolcano
+ 16. SetDoseType
+
+文件:  dose_response_general.R 
+----------------------------- 
+  1. bmdoneitem
+  2. calcmean
+  3. error
+  4. FilterDRFit
+  5. FilterDRFitCont
+  6. fit_drc_modelling
+  7. fitoneitem
+  8. get_val
+  9. GetFitResultColNames
+ 10. GetFitResultFeatureIDs
+ 11. GetFitResultMatrix
+ 12. GetFitResultModelNms
+ 13. my.fitoneitem
+ 14. PerformBMDCalc
+ 15. PerformContBMDCalc
+ 16. PerformContDRFit
+ 17. PerformDRFit
+ 18. PrepareDataForDoseResponse
+ 19. PrepareSigDRItems
+ 20. sensPOD
+ 21. wtt.func
+
+文件:  dose_response_graphs.R 
+---------------------------- 
+  1. exp2fun
+  2. exp3fun
+  3. exp4fun
+  4. exp5fun
+  5. GetFunctionalDetails
+  6. hillfun
+  7. PlotDRHistogram
+  8. PlotDRModelBars
+  9. PlotMetaboliteDRCurve
+ 10. powerfun
+
+文件:  dose_response_utils.R 
+--------------------------- 
+  1. bmdContres
+  2. bmdres
+  3. FilterBMDResults
+  4. fun.boot
+  5. GetDrcFitAllGeneIds
+  6. GetDrcFitAllInvStatus
+  7. GetDrcFitAllModNms
+  8. GetDrcFitAllRes
+  9. GetDrcFitAllResColNms
+ 10. GetDRRes
+ 11. GetItemSelectData
+ 12. GetItemSelectDataColNms
+ 13. GetItemSelectDataMean
+ 14. GetItemSelectDataMeanColNms
+ 15. GetItemSelectDataRowNms
+ 16. GetItemSelectDose
+ 17. GetItemSelectItems
+ 18. GetNumberDoses
+ 19. InitDrcFitObj
+ 20. InitItemSelect
+ 21. pureErrorAnova
+ 22. pureErrorAnova.lm
+ 23. randomLinComb
+ 24. randomLinComb.default
+ 25. randomLinComb.lm
+ 26. startvalExp2
+ 27. startvalExp3
+ 28. startvalExp4
+ 29. startvalExp5
+ 30. startvalHillnls2
+ 31. startvalPow
+ 32. std
+
+文件:  duplicates_estimates.R 
+---------------------------- 
+  1. estimateDP
+  2. estimatesCorrect
+  3. MergeFeatureDuplicates
+  4. performDuplicateEstimation
+  5. Read.duplicatesDataTable
+
+文件:  enrich_graphics.R 
+----------------------- 
+  1. color_scale
+  2. concplot
+  3. GetCurrentImg
+  4. getIdx
+  5. GetMyHeatCols
+  6. GetShortNames
+  7. image.plot
+  8. image.plot.plt
+  9. PlotConcRange
+ 10. PlotEnrichDotPlot
+ 11. PlotEnrichNet.Overview
+ 12. PlotMSEA.Overview
+ 13. PlotORA
+ 14. PlotQEA.MetSet
+ 15. PlotQEA.Overview
+ 16. PrepareSifDownloads
+
+文件:  enrich_integ.R 
+-------------------- 
+  1. CreateIntegMatchingTable
+  2. CreateIntegratedPathwayMemberTableRMD
+  3. DefineIntegPvalueMethod
+  4. FUN
+  5. getEdgeLabel
+  6. getEdgeLty
+  7. GetGeneHitsRowNumber
+  8. GetGeneMappingResultTable
+  9. GetIntegHTMLPathSet
+ 10. GetIntegResultColNames
+ 11. GetIntegResultMatrix
+ 12. GetIntegResultPathIDs
+ 13. GetIntegResultPathNames
+ 14. GetKeggEntryMappingTable
+ 15. GetKEGGNodeInfo
+ 16. getLayout
+ 17. performIntegGlobalMergeP
+ 18. performIntegPathMergeP
+ 19. PerformIntegPathwayAnalysis
+ 20. performPathEnrich
+ 21. performWeightedZtest
+ 22. plotGraph
+ 23. PlotInmexGraph
+ 24. PlotInmexPath
+ 25. plotIntegGlobalMergeP
+ 26. PrepareIntegData
+ 27. RemoveCmpd
+ 28. RemoveGene
+ 29. x.u2p
+ 30. y.u2p
+
+文件:  enrich_kegg.R 
+------------------- 
+  1. doGene2KONameMapping
+  2. doKEGG2NameMapping
+  3. doKOFiltering
+  4. FUN
+  5. LoadKEGGKO_lib
+  6. MapCmpd2KEGGNodes
+  7. MapKO2KEGGEdges
+  8. MatchQueryOnKEGGMap
+  9. MergeDatasets
+ 10. OrganizeJsonforNextwork
+ 11. OrganizeTarJsonforNextwork
+ 12. PerformKOEnrichAnalysis_KO01100
+ 13. PerformKOEnrichAnalysis_List
+ 14. PerformMapping_ko01100
+ 15. PrepareKeggQueryJson
+ 16. PrepareNetworkData
+ 17. Save2KEGGJSON
+
+文件:  enrich_mset.R 
+------------------- 
+  1. Get.ConcRef
+  2. GetMsetLibCheckMsg
+  3. GetMsetMembers
+  4. GetMsetNames
+  5. GetMsetReferences
+  6. GetRefLibCheckMsg
+  7. SearchByCompound
+  8. SearchByName
+  9. SearchMsetLibraries
+ 10. SetCachexiaSetUsed
+ 11. SetCurrentMsetLib
+ 12. SetKEGG.PathLib
+ 13. SetMetabolomeFilter
+ 14. SetSMPDB.PathLib
+ 15. Setup.HMDBReferenceMetabolome
+ 16. Setup.KEGGReferenceMetabolome
+ 17. Setup.UserMsetLibData
+
+文件:  enrich_name_match.R 
+------------------------- 
+  1. CleanLipidNames
+  2. ConvertKEGGtoName
+  3. CreateMappingResultTable
+  4. CrossReferencingAPI
+  5. GetCandidateList
+  6. GetCanListRowNumber
+  7. GetHitsRowNumber
+  8. GetIsLipids
+  9. GetMapTable
+ 10. GetMatchedCompounds
+ 11. GetPathNames
+ 12. GetQuery
+ 13. PerformApproxMatch
+ 14. PerformDetailMatch
+ 15. PerformMultiMatch
+ 16. SetCandidate
+
+文件:  enrich_path_graphics.R 
+---------------------------- 
+  1. CalculateCircleInfo
+  2. fig2dev
+  3. GeneratePathwayJSON
+  4. GetCircleInfo
+  5. GetMetPANodeInfo
+  6. getndp
+  7. PlotKEGGPath
+  8. PlotMetpaPath
+  9. PlotPathSummary
+ 10. PlotPathSummaryGG
+ 11. plt2fig
+ 12. RerenderMetPAGraph
+ 13. setRendAttrs
+ 14. usr2dev
+ 15. usr2plt
+ 16. usr2png
+ 17. x.u2p
+ 18. xytrans
+ 19. xytrans2
+ 20. y.u2p
+
+文件:  enrich_path_stats.R 
+------------------------- 
+  1. CalculateOraScore
+  2. CalculateQeaScore
+  3. ComputePathHeatmap
+  4. ComputePathHeatmapList
+  5. ComputePathHeatmapTable
+  6. GetHTMLPathSet
+  7. GetORA.keggIDs
+  8. GetORA.pathNames
+  9. GetORA.smpdbIDs
+ 10. GetOrgPathLbl
+ 11. GetOrgPathVal
+ 12. GetQEA.keggIDs
+ 13. GetQEA.pathNames
+ 14. GetQEA.smpdbIDs
+ 15. my.fun
+ 16. prepare.qea.score
+ 17. save.qea.score
+ 18. SetupKEGGLinks
+ 19. SetupSMPDBLinks
+
+文件:  enrich_stats.R 
+-------------------- 
+  1. CalculateGlobalTestScore
+  2. CalculateHyperScore
+  3. CalculateSSP
+  4. CreatePathwayMemberTableRMD
+  5. GetEnrichPieColors
+  6. GetEnrichPieHits
+  7. GetEnrichPieNames
+  8. GetHTMLMetSet
+  9. GetMetSetName
+ 10. GetORA.colorBar
+ 11. GetORA.mat
+ 12. GetORA.rowNames
+ 13. GetORATable
+ 14. GetQEA.colorBar
+ 15. GetQEA.mat
+ 16. GetQEA.rowNames
+ 17. GetQEATable
+ 18. GetSSP.Concs
+ 19. GetSSP.Details
+ 20. GetSSP.HMDB
+ 21. GetSSP.Names
+ 22. GetSSP.Notes
+ 23. GetSSP.Pmids
+ 24. GetSSP.RefConc
+ 25. GetSSP.RefConcs
+ 26. GetSSP.Refs
+ 27. GetSSP.States
+ 28. GetSSPTable
+ 29. my.fun
+ 30. PlotEnrichPieChart
+ 31. prepare.globaltest.score
+ 32. save.globaltest.score
+
+文件:  gene_fun_utils.R 
+---------------------- 
+  1. load.enrich.compound.lib
+  2. load.enrich.lib
+  3. PerformEnrichAnalysis
+  4. PerformNetEnrichment
+
+文件:  general_anot_utils.R 
+-------------------------- 
+  1. convert2KeggEntry
+  2. CrossReferencing
+  3. doAllGeneIDMapping
+  4. doCompoundMapping
+  5. doGeneEntryMapping
+  6. doGeneIDMapping
+  7. GetFinalNameMap
+  8. GetKEGG.PathNames
+  9. HMDBID2KEGGID
+ 10. HMDBID2Name
+ 11. KEGGID2HMDBID
+ 12. KEGGID2Name
+ 13. KEGGPATHID2SMPDBIDs
+ 14. MetaboliteMappingExact
+ 15. PerformCmpdMapping
+ 16. PerformGeneMapping
+ 17. SetOrganism
+ 18. Setup.BiofluidType
+ 19. Setup.ConcData
+
+文件:  general_data_utils.R 
+-------------------------- 
+  1. AddErrMsg
+  2. AddMsg
+  3. checkDataGenericFormat
+  4. CleanDataObjects
+  5. Convert2AnalObject
+  6. ExtractMetabolonCompoundIDs
+  7. ExtractMetabolonMetaFactors
+  8. FUN
+  9. get.mSet
+ 10. GetContainsBlank
+ 11. GetContainsQC
+ 12. GetCurrentCmpdImgSize
+ 13. GetCurrentMsg
+ 14. GetErrMsg
+ 15. GetExampleDataPath
+ 16. GetFactors
+ 17. GetFilesToBeSaved
+ 18. GetGroupNames
+ 19. GetMetabolonCMPDIDs
+ 20. GetMetabolonMetaFactor
+ 21. GetMetaInfo
+ 22. GetNameCheckMsgs
+ 23. GetNMDRStudy
+ 24. GetNormGroupNames
+ 25. GetOrigSmplGroupNamesPerMeta
+ 26. GetOrigSmplSize
+ 27. GetPrenormSmplGroupNames
+ 28. GetPrimaryInfo
+ 29. GetRCommandHistory
+ 30. GetSampleNames
+ 31. GetSysMessages
+ 32. init.global.vars
+ 33. init.MummiMSet
+ 34. InitDataObjects
+ 35. load.scripts.on.demand
+ 36. PlotCmpdSummary
+ 37. PrepareSpec4Switch
+ 38. process_metadata
+ 39. Read.mzTab
+ 40. Read.PeakList
+ 41. Read.TextData
+ 42. Read.TextDataDose
+ 43. Read.TextDataDoseWithMeta
+ 44. ReadMetabolonSheets
+ 45. ReadPairFile
+ 46. RecordRCommand
+ 47. RecordSysMessage
+ 48. Reload.scripts.on.demand
+ 49. SaveRCommands
+ 50. SaveTransformedData
+ 51. set.mSet
+ 52. SetAnalType
+ 53. SetBlankQcBool
+ 54. SetCmpdSummaryType
+ 55. SetDesignType
+ 56. Setup.MapData
+ 57. TableFormatCoerce
+ 58. Update.MapData
+ 59. UpdateDataObjects
+ 60. ValidateMetabolonData
+ 61. warning
+
+文件:  general_lib_utils.R 
+------------------------- 
+  1. error
+  2. get.my.lib
+  3. getDynLoadPath
+  4. load_biocparallel
+  5. load_caret
+  6. load_data.table
+  7. load_ggplot
+  8. load_gplots
+  9. load_graph
+ 10. load_grid
+ 11. load_httr
+ 12. load_igraph
+ 13. load_kegggraph
+ 14. load_lattice
+ 15. load_msnbase
+ 16. load_pls
+ 17. load_progress
+ 18. load_RBGL
+ 19. load_rcolorbrewer
+ 20. load_reshape
+ 21. load_rgraphwiz
+ 22. load_RSclient
+ 23. load_Rserve
+ 24. load_rsqlite
+ 25. load_stringr
+ 26. warning
+
+文件:  general_misc_utils.R 
+-------------------------- 
+  1. all.numeric
+  2. CalculatePairwiseDiff
+  3. checkfac
+  4. CleanData
+  5. cleanMem
+  6. CleanNames
+  7. CleanNumber
+  8. ClearNumerics
+  9. ClearStrings
+ 10. ComputeColorGradient
+ 11. computeEmpiricalFilterCutoff
+ 12. convert.rda2qs
+ 13. convert.rds2qs
+ 14. cv_cal
+ 15. end.with
+ 16. error
+ 17. ExpandSchema
+ 18. extractTopFeatures
+ 19. f
+ 20. fast.write.csv
+ 21. generate_breaks
+ 22. get_pheatmap_dims
+ 23. Get.bwss
+ 24. get.max.allow
+ 25. get.sqlite.con
+ 26. GetAbundanceLabel
+ 27. GetBashFullPath
+ 28. GetCMD
+ 29. GetColorGradient
+ 30. GetColorSchema
+ 31. GetConvertFullPath
+ 32. GetCurrentPathForScheduler
+ 33. getDataFromTextArea
+ 34. GetDist3D
+ 35. GetExtendRange
+ 36. GetFisherPvalue
+ 37. GetPrimaryType
+ 38. GetRGBColorGradient
+ 39. GetShapeSchema
+ 40. GetSigTable
+ 41. GetSizeGradient
+ 42. GetVariableLabel
+ 43. getVennCounts
+ 44. gg_color_hue
+ 45. graph.eda
+ 46. graph.noa
+ 47. graph.sif
+ 48. hex2rgb
+ 49. hex2rgba
+ 50. isEmptyMatrix
+ 51. ls.objects
+ 52. my.col2rgb
+ 53. my.col2rgba
+ 54. my.slowreaders
+ 55. napply
+ 56. overlap_ratio
+ 57. perform.computing
+ 58. perform.fast.univ.tests
+ 59. Perform.permutation
+ 60. PerformFastUnivTests
+ 61. PerformFeatureFilter
+ 62. PlotLoadBoxplot
+ 63. PlotPCAPairSummaryMeta
+ 64. PrepareEnrichNet
+ 65. PrepareLatex
+ 66. readDataTable
+ 67. RemoveDuplicates
+ 68. RemoveFile
+ 69. RemoveFolder
+ 70. replace.by.lod
+ 71. ReplaceMissingByLoD
+ 72. rescale2NewRange
+ 73. rowcolFt
+ 74. rowcoltt
+ 75. saveNetworkInSIF
+ 76. scale_vec_colours
+ 77. ShowMemoryUse
+ 78. sqr
+ 79. sum.na
+ 80. sync.data.metadata
+ 81. UnzipUploadedFile
+ 82. UpdateGraphSettings
+ 83. var.na
+ 84. warning
+ 85. XSet2MSet
+
+文件:  general_norm_utils.R 
+-------------------------- 
+  1. AutoNorm
+  2. CleanDataMatrix
+  3. CompNorm
+  4. getFeatureNum
+  5. GetNormMethods
+  6. GetPrenormClsNms
+  7. GetPrenormFeatureNms
+  8. GetPrenormFeatureNum
+  9. GetPrenormSmplNms
+ 10. GetRandomSubsetIndex
+ 11. Log2Norm
+ 12. LogNorm
+ 13. MeanCenter
+ 14. MedianNorm
+ 15. Normalization
+ 16. ParetoNorm
+ 17. PlotNormSummary
+ 18. PlotSampleNormSummary
+ 19. prepare.prenorm.data
+ 20. PreparePrenormData
+ 21. ProbNorm
+ 22. QuantileNormalize
+ 23. RangeNorm
+ 24. RequireFastUnivTests
+ 25. setRatioOption
+ 26. SquareRootNorm
+ 27. SumNorm
+ 28. UpdateData
+ 29. UpdateLoadingCmpd
+ 30. ValidateFeatureName
+
+文件:  general_proc_utils.R 
+-------------------------- 
+  1. bede
+  2. blankfeatureFiltering
+  3. CheckContainsBlank
+  4. CheckQCRSD
+  5. ContainMissing
+  6. ede
+  7. ExportMissingHeatmapJSON
+  8. fetchMissFilterMsg
+  9. fetchReplaceMsg
+ 10. FilterVariable
+ 11. FUN
+ 12. GetFilterTotalMsg
+ 13. GetGroupNumber
+ 14. GetMetaDataCol
+ 15. GetMinGroupSize
+ 16. GetMissingTestMsg
+ 17. GetMissNumMsg
+ 18. GetOrigGrpNms
+ 19. GetOrigSmplNms
+ 20. ImputeMissingVar
+ 21. IsDataContainsNegative
+ 22. IsSmallSmplSize
+ 23. lin2
+ 24. PerformSanityClosure
+ 25. PlotMissingDistr
+ 26. PlotMissingHeatmap
+ 27. PlotRSDViolin
+ 28. RemoveMissingByPercent
+ 29. rm_outliers
+ 30. rsd_fun
+ 31. SanityCheckData
+ 32. test.missing.sig
+ 33. update.feature.nm
+ 34. UpdateFeatureName
+ 35. UpdateSampleGroups
+
+文件:  generic_c_utils.R 
+----------------------- 
+  1. C_imodwt_r
+  2. C_modwt_r
+  3. fmatch_r
+
+文件:  meta_data_utils.R 
+----------------------- 
+  1. GetAllDataNames
+  2. GetDataDims
+  3. GetLimmaResTable
+  4. GetMetaGroupNames
+  5. GetMetaSanityCheckMsg
+  6. PerformDataNormalization
+  7. PerformIndNormalization
+  8. PerformLimma
+  9. PerformLimmaDE
+ 10. PlotSelectedFeature
+ 11. ReadIndData
+ 12. RegisterData
+ 13. RemoveData
+ 14. SanityCheckIndData
+ 15. SelectMultiData
+ 16. SetCurrentData
+ 17. SetupMetaStats
+
+文件:  meta_methods.R 
+-------------------- 
+  1. CheckMetaDataConsistency
+  2. combinePvals
+  3. fishersum
+  4. fstatmeta
+  5. FUN
+  6. GetMetaGeneIDType
+  7. GetMetaProcMsg
+  8. GetMetaResultColNames
+  9. GetMetaResultGeneIDLinks
+ 10. GetMetaResultGeneIDs
+ 11. GetMetaResultGeneSymbols
+ 12. GetMetaResultMatrix
+ 13. GetMetaStat
+ 14. GetMetaStatNames
+ 15. panel
+ 16. panel.groups
+ 17. PerformEachDEAnal
+ 18. PerformMetaMerge
+ 19. PerformPvalCombination
+ 20. PerformVoteCounting
+ 21. PlotDataProfile
+ 22. PlotMetaDensity
+ 23. PlotMetaPCA
+ 24. prepanel
+ 25. PrepareUpsetData
+ 26. qc.boxplot
+ 27. qc.pcaplot
+ 28. strip
+ 29. ToggleMetaRes
+
+文件:  meta_pathway.R 
+-------------------- 
+  1. AdductMapping
+  2. AverageRTfrac
+  3. AverageRTtol
+  4. CacheQSClean
+  5. CheckAllRT
+  6. Convert2MummichogMetaPath
+  7. Customize.MetaAdduct
+  8. defineVersion
+  9. ExtractNormTable
+ 10. FetchDataSet
+ 11. Finish.DataSet
+ 12. FormatmSet
+ 13. GetMetaPathDataDims
+ 14. GetMetaPathGroupNames
+ 15. GetMetaPathNMs
+ 16. GetMetaPathResultColNames
+ 17. GetMetaPathResultItem
+ 18. GetMetaPathSanityCheckMsg
+ 19. GetSigPathNums
+ 20. GetVennPathsNames
+ 21. MetaPathNormalization
+ 22. mSetQSDelete
+ 23. newDataset
+ 24. panel.groups
+ 25. PerformMetaPSEA
+ 26. PlotPathDataProfile
+ 27. PlotPathwayMetaAnalysis
+ 28. prepanel
+ 29. Prepare4Network
+ 30. PrepareCMPDList
+ 31. PrepareMetaPath
+ 32. PrepareMetaPathData
+ 33. qc.biBoxPlot
+ 34. ReadMetaPathTable
+ 35. ReadMetaPathTableMix
+ 36. Restore.CmdHistory
+ 37. SanityCheckMetaPathTable
+ 38. savePeakListMetaData
+ 39. SelectMultiPathData
+ 40. setInclusionDataSets
+ 41. strip
+ 42. UniqueDataSet
+ 43. UpdateDataSet
+ 44. UpgradeDataSet
+
+文件:  mgwas_data.R 
+------------------ 
+  1. addEntrezID
+  2. AddEntryExposure
+  3. doGeneIDMapping
+  4. get.sqlite.con
+  5. GetPathCol
+  6. GetPathRowNames
+  7. GetResCol
+  8. GetResColByName
+  9. GetResRowNames
+ 10. GetSumCol
+ 11. load_rsqlite
+ 12. PerformCmpdMapping2
+ 13. PrepareMgwasCSV
+ 14. query_mr_results
+ 15. query_mr_sensitivity
+ 16. query_mr_single
+ 17. query.sqlite
+ 18. QueryExposure
+ 19. QueryOutcome
+ 20. RemoveEntriesExposure
+ 21. RemoveEntryExposure
+ 22. SetDbOpt
+ 23. SetLDProxy
+ 24. SetLDR2
+ 25. SetMappingType
+ 26. SetMRMethod
+ 27. SetupIndListData
+ 28. SetupListData
+
+文件:  mgwas_misc.R 
+------------------ 
+  1. clump_data_local_ld
+  2. flatten_response
+  3. get_statement
+  4. ld_clump_custom
+  5. ld_clump_local_custom
+  6. parse_snp2met
+  7. parse_snp2met_exposure
+  8. Query.mGWASDB
+  9. stop_for_status
+
+文件:  mgwas_mr.R 
+---------------- 
+  1. api_post_request
+  2. api_request
+  3. capture_messages
+  4. CheckSNPs
+  5. extractGwasDB
+  6. GetHeteroRes.mat
+  7. GetHeteroRes.rowNames
+  8. GetMRMat
+  9. GetMRMatColNames
+ 10. GetMRMatRowNames
+ 11. GetMRRes.mat
+ 12. GetMRRes.rowNames
+ 13. GetPleioRes.mat
+ 14. is.numericable
+ 15. message
+ 16. mr_forestPlot
+ 17. mr_funnelPlot
+ 18. mr_looPlot
+ 19. mr_modified
+ 20. mr_raps_modified
+ 21. mr_scatterPlot
+ 22. PerformMRAnalysis
+ 23. PerformSnpFiltering
+ 24. PlotForest
+ 25. PlotFunnel
+ 26. PlotLeaveOneOut
+ 27. PlotScatter
+ 28. query_melodipresto
+ 29. QueryLiteratureMelodiPresto
+ 30. readOpenGWASKey
+ 31. ResetSNPEntries
+ 32. UpdateSNPEntries
+
+文件:  mgwas_tr.R 
+---------------- 
+  1. api_post_request
+  2. api_request
+  3. clump_data_local_ld
+  4. convertIgraph2JSON
+  5. CreateGraph
+  6. DecomposeGraph
+  7. GetNetNames
+  8. GetNetsNameString
+  9. GetNetStatByType
+ 10. GetNetStats
+ 11. GetQueryNum
+ 12. GetSeedsColumn
+ 13. GetShortestPaths
+ 14. GetTableNames
+ 15. init.multilist
+ 16. PerformLayOut
+ 17. PrepareNet
+ 18. QueryLiteratureMelodiPresto
+ 19. set.net.names
+ 20. UpdateNetworkLayout
+
+文件:  multifac_asca_heatmap2.R 
+------------------------------ 
+  1. ASCAfun.res
+  2. ASCAfun1
+  3. ASCAfun2
+  4. CalculateImpVarCutoff
+  5. error
+  6. get_lower_tri
+  7. get_pheatmap_dims
+  8. get_upper_tri
+  9. Get.asca.leverage
+ 10. Get.asca.tss
+ 11. Get.Leverage
+ 12. GetAscaSigColNames
+ 13. GetAscaSigFileName
+ 14. GetAscaSigMat
+ 15. GetAscaSigRowNames
+ 16. getFactorSize
+ 17. GetSigTable.ASCA
+ 18. heckbert
+ 19. heckbert.nicenum
+ 20. PCA.GENES
+ 21. Perform.ASCA
+ 22. Perform.ASCA.permute
+ 23. PlotASCA.Permutation
+ 24. PlotAscaImpVar
+ 25. PlotASCAInteraction
+ 26. PlotASCAModel
+ 27. PlotASCAModelScree
+ 28. PlotHeatMap2
+ 29. PlotMetaCorrHeatmap
+ 30. PlotMetaHeatmap
+ 31. PlotSigVar
+ 32. PlotStaticHeatMap2
+ 33. PlotStaticMetaHeatmap
+ 34. scale_mat
+ 35. scale_rows
+ 36. sumSquare
+ 37. warning
+
+文件:  multifac_covariate.R 
+-------------------------- 
+  1. CombineFacScatter.Anal
+  2. convertCovariate2Fun
+  3. CovariateScatter.Anal
+  4. FeatureCorrelationMeta
+  5. GetCovDnIDs
+  6. GetCovDnMat
+  7. GetCovSigColNames
+  8. GetCovSigFileName
+  9. GetCovSigMat
+ 10. GetCovSigRowNames
+ 11. GetCovUpIDs
+ 12. GetCovUpMat
+ 13. GetMultiRFSigColNames
+ 14. GetMultiRFSigMat
+ 15. GetMultiRFSigRowNames
+ 16. GetRawCovThresh
+ 17. is_purely_numeric
+ 18. partial_shrink
+ 19. PlotCovariateMap
+ 20. PlotImpVarCont
+ 21. PlotImpVarDisc
+ 22. PlotRF.ClassifyMeta
+ 23. PlotRF.OutlierCont
+ 24. PlotRF.OutlierMeta
+ 25. PlotRF.RegressionDetail
+ 26. PlotRF.VIPMeta
+ 27. PlotRFImpRankStability
+ 28. prepareLimmaContrast
+ 29. RF.AnalMeta
+
+文件:  multifac_mb.R 
+------------------- 
+  1. fitFDist
+  2. GetMBSigColNames
+  3. GetMBSigMat
+  4. GetMBSigRowNames
+  5. GetSigTable.MB
+  6. matrix.cov
+  7. mb.1D
+  8. mb.2D
+  9. mb.MANOVA
+ 10. ot.helmert
+ 11. performMB
+ 12. PlotMBTimeProfile
+ 13. plotProfile
+ 14. squeezeVar
+ 15. trigammaInverse
+
+文件:  multifac_metadata.R 
+------------------------- 
+  1. ContainsMetaPlaceholder
+  2. error
+  3. GetMetaByCol
+  4. GetMetaDataGroups
+  5. GetMetaTypes
+  6. GetUniqueMetaNames
+  7. make_placeholders
+  8. PlotMultiFacCmpdSummary
+  9. Read.TextDataTs
+ 10. ReadMetaData
+ 11. RemoveSelectedMeta
+ 12. SanityCheckMeta
+ 13. SetDataTypeOfMeta
+ 14. SetMetaTypes
+ 15. SetSelectedMetaInfo
+ 16. UpdateMetaColName
+ 17. UpdateMetaData
+ 18. UpdateMetaLevels
+ 19. UpdateMetaOrder
+ 20. UpdateMetaType
+
+文件:  multifac_pca_anova2.R 
+--------------------------- 
+  1. ANOVA2.Anal
+  2. aov.1wayrep
+  3. aov.2way
+  4. aov.2wayrep
+  5. aov.mixed
+  6. error
+  7. ext
+  8. GetAnova2DnMat
+  9. GetAnova2UpMat
+ 10. GetAov2DnIDs
+ 11. GetAov2SigColNames
+ 12. GetAov2SigFileName
+ 13. GetAov2SigMat
+ 14. GetAov2SigRowNames
+ 15. GetAov2UpIDs
+ 16. GetShapeSchemaMeta
+ 17. GetSigTable.Aov2
+ 18. iPCA.Anal
+ 19. PlotANOVA2
+ 20. PlotPCA2DScoreMeta
+ 21. plotVennDiagram
+ 22. warning
+
+文件:  networks_enrich.R 
+----------------------- 
+  1. DGlasso
+  2. error
+  3. GetNetworkGeneMappingResultTable
+  4. myUpperTriangle
+  5. PerformDSPC
+  6. preparePhenoListSeeds
+  7. QueryPhenoSQLite
+  8. SearchNetDB
+
+文件:  networks_view.R 
+--------------------- 
+  1. community.significance.test
+  2. ComputeSubnetStats
+  3. convertIgraph2JSON
+  4. CreateGraph
+  5. DecomposeGraph
+  6. doID2LabelMapping
+  7. ExcludeNodes
+  8. ExportNetwork
+  9. ExtractModule
+ 10. FilterBipartiNet
+ 11. FilterNetByCor
+ 12. FindCommunities
+ 13. FUN
+ 14. GetMaxNegCoeff
+ 15. GetMaxPosCoeff
+ 16. GetMaxRawPVal
+ 17. GetMinConnectedGraphs
+ 18. GetMinNegCoeff
+ 19. GetMinPosCoeff
+ 20. GetNetsEdgeNum
+ 21. GetNetsName
+ 22. GetNetsNameString
+ 23. GetNetsNodeNum
+ 24. GetNetsQueryNum
+ 25. GetNodeBetweenness
+ 26. GetNodeDegrees
+ 27. GetNodeEmblEntrezIDs
+ 28. GetNodeEntrezIDs
+ 29. GetNodeIDs
+ 30. GetNodeNames
+ 31. GetShortestPaths
+ 32. PerformLayOut
+ 33. PlotNetwork
+ 34. PrepareNetwork
+ 35. PrepareSubnetDownloads
+ 36. sync2vecs
+ 37. UpdateIntegPathwayAnalysis
+ 38. UpdateNetworkLayout
+ 39. UpdateSubnetStats
+
+文件:  others_lipomics.R 
+----------------------- 
+  1. analyze.lipids
+  2. calculateConcISO
+  3. calculateConcNoISO
+  4. computeConc
+
+文件:  peaks_ms2fun.R 
+-------------------- 
+  1. formatfunresult
+  2. Read.PeakMS2ListData
+  3. search_MS2compoundLib
+  4. SetMS2IDType
+
+文件:  peaks_to_function.R 
+------------------------- 
+  1. add
+  2. as.list
+  3. CalculateEffectSize
+  4. compute.mummichog.fgsea
+  5. compute.mummichog.RT.fgsea
+  6. compute.mummichogRTSigPvals
+  7. compute.mummichogSigPvals
+  8. ComputeMummichogPermPvals
+  9. ComputeMummichogRTPermPvals
+ 10. Convert2Dictionary
+ 11. convert2JsonList
+ 12. Convert2Mummichog
+ 13. count_cpd2mz
+ 14. CreateHeatmapJson
+ 15. CreateListHeatmapJson
+ 16. CreateMummichogLibs
+ 17. doHeatmapMummichogTest
+ 18. double.size
+ 19. error
+ 20. fgsea2
+ 21. format_mzmine_pktable
+ 22. GetAdductMsg
+ 23. GetCompoundDetails
+ 24. GetCurrencyMsg
+ 25. GetDefaultPvalCutoff
+ 26. GetDefaultRTTol
+ 27. GetECMsg
+ 28. GetMatchingDetails
+ 29. GetMummichogHTMLPathSet
+ 30. GetMummichogPathSetDetails
+ 31. GetMummiDataType
+ 32. GetMummiMode
+ 33. GetMummiResColNames
+ 34. GetMummiResMatrix
+ 35. GetMummiResRowNames
+ 36. GetOrgMummichogLbl
+ 37. GetOrgMummichogVal
+ 38. GetPeakFormat
+ 39. GetTopInx
+ 40. improve_text_position
+ 41. init.Permutations
+ 42. init.RT.Permutations
+ 43. make_cpdlist
+ 44. make_ecpdlist
+ 45. my.fun
+ 46. myFastList
+ 47. mz_tolerance
+ 48. new_adduct_mzlist
+ 49. perform.mummichogPermutations
+ 50. perform.mummichogRTPermutations
+ 51. PerformAdductMapping
+ 52. PerformCurrencyMapping
+ 53. PerformPSEA
+ 54. PlotlyPeaks2Paths
+ 55. PlotPeaks2Paths
+ 56. PlotPSEAIntegPaths
+ 57. Prepare4IntegNetwork
+ 58. Prepare4TarIntegNetwork
+ 59. PrepareIntegCMPDList
+ 60. PreparePeakTable4PSEA
+ 61. ProcessConvert2Mummichog
+ 62. Read.PeakListData
+ 63. rt.included
+ 64. SanityCheckMummichogData
+ 65. save.mummichog.restable
+ 66. search.compoundLib
+ 67. search.compoundLibMeta
+ 68. SetMetaPeaksPvals
+ 69. SetMummichogPval
+ 70. SetMummichogPvalFromPercent
+ 71. SetOrganism
+ 72. SetPeakEnrichMethod
+ 73. SetPeakFormat
+ 74. SetRTincluded
+ 75. Setup.AdductData
+ 76. setup.psea.library
+ 77. sumlog
+ 78. UpdateEC_Rules
+ 79. UpdateInstrumentParameters
+
+文件:  plotly_utils.R 
+-------------------- 
+  1. by_layer
+  2. error
+  3. gg2list_new
+  4. ggplotly_build
+  5. ggplotly_modified
+  6. invert_date
+  7. reComputeGroup
+  8. scale_x
+  9. scale_y
+ 10. theme_el
+
+文件:  power_utils.R 
+------------------- 
+  1. GetPowerValuesX
+  2. GetSampleSizeLadder
+  3. InitPowerAnal
+  4. PerformPowerProfiling
+  5. PlotPowerProfile
+  6. PlotPowerStat
+
+文件:  rpackage_config.R 
+----------------------- 
+未找到函数。
+
+文件:  spectra_processing.R 
+-------------------------- 
+  1. CalCV
+  2. CentroidCheck
+  3. centroidMSData
+  4. checkdataexits
+  5. checkMS2annotationExists
+  6. cleanEICLayer
+  7. CreateMS2RawRscript
+  8. CreateRawRscript
+  9. CreateRawRscript4Asari
+ 10. exportSwathDesign
+ 11. extractcompoundNMs
+ 12. extractformulaNMs
+ 13. extractInchikeys
+ 14. extractSimScores
+ 15. extratExposomeClassName
+ 16. extratExposomeClassNumber
+ 17. extratMetabolomeClassName
+ 18. extratMetabolomeClassNumber
+ 19. FastRunningShow_auto
+ 20. FastRunningShow_customized
+ 21. find_peaks
+ 22. findPeaks
+ 23. FTno2Num
+ 24. FUN
+ 25. generateAsariPeakList
+ 26. generateCols
+ 27. GenerateParamFile
+ 28. GeneratePeakList
+ 29. getBloodRawData
+ 30. getCOVIDRawData
+ 31. getDataPath
+ 32. getExposomeInfo
+ 33. getExposomeRawData
+ 34. getMalariaRawData
+ 35. GetRawClassNms
+ 36. GetRawFileNms
+ 37. getSpectraInclusion
+ 38. GetSWATHDesginLow
+ 39. GetSWATHDesginUp
+ 40. InitializaPlan
+ 41. InitMSObjects
+ 42. LogNorm
+ 43. mzrt2ID
+ 44. mzrt2ID2
+ 45. PerformDataInspect
+ 46. PerformDataTrimming
+ 47. PerformExtractHMDBCMPD
+ 48. PerformMirrorPlotting
+ 49. PerformMirrorPlottingWeb
+ 50. PerformParamsOptimization
+ 51. PerformPeakProfiling
+ 52. PerformResultSummary
+ 53. PerformROIExtraction
+ 54. PerformSWATHDesignDetection
+ 55. plotBPIs
+ 56. plotMSfeature
+ 57. plotMSfeatureSvg
+ 58. plotSingleTIC
+ 59. plotSingleXIC
+ 60. PlotSpectraBPIadj
+ 61. PlotSpectraInsensityStatics
+ 62. PlotSpectraRTadj
+ 63. plotTICs
+ 64. PlotXIC
+ 65. PlotXICUpdate
+ 66. readAdductsList
+ 67. ReadRawMeta
+ 68. retrieveAlgorithmInfo
+ 69. retrieveModeInfo
+ 70. retrieveOmicsType
+ 71. SetPeakParam
+ 72. SetRawFileNames
+ 73. SetUserPath
+ 74. spectraInclusion
+ 75. updateSpectra3DPCA
+ 76. verifyParam
+
+文件:  stats_chemometrics.R 
+-------------------------- 
+  1. calculate.pls.vip
+  2. calculateDistSig
+  3. checkCVperformed
+  4. ComputeMultiVarTest
+  5. ComputePERMANOVA
+  6. ComputePERMANOVAstat
+  7. Get.pls.accu
+  8. Get.pls.bw
+  9. GetDefaultPLSCVComp
+ 10. GetDefaultPLSPairComp
+ 11. GetDefaultSPLSCVComp
+ 12. GetDefaultSPLSPairComp
+ 13. GetMaxPCAComp
+ 14. GetMaxPLSBiplotNum
+ 15. GetMaxPLSCVComp
+ 16. GetMaxPLSPairComp
+ 17. GetOPLSLoadAxesSpec
+ 18. GetOPLSSigCmpds
+ 19. GetOPLSSigColNames
+ 20. GetOPLSSigMat
+ 21. GetPCALoadAxesSpec
+ 22. GetPCALoadCmpds
+ 23. GetPCALoadCmpdsNlength
+ 24. getPCALoadCmpdsSplit
+ 25. GetPCALoadMat
+ 26. GetPCAPermANOVA
+ 27. GetPCAPermANOVAText
+ 28. GetPCAStats
+ 29. GetPLS_CVColNames
+ 30. GetPLS_CVMat
+ 31. GetPLS_CVRowNames
+ 32. GetPLSBestTune
+ 33. GetPLSLoadAxesSpec
+ 34. GetPLSLoadCmpds
+ 35. GetPLSLoadMat
+ 36. GetPLSSigColNames
+ 37. GetPLSSigMat
+ 38. GetPLSSigRowNames
+ 39. GetSPLS_CVColNames
+ 40. GetSPLS_CVMat
+ 41. GetSPLS_CVRowNames
+ 42. GetSPLSLoadAxesSpec
+ 43. GetSPLSLoadCmpds
+ 44. GetSPLSLoadMat
+ 45. GetSPLSSigColNames
+ 46. my.fun
+ 47. OPLSDA.Permut
+ 48. OPLSR.Anal
+ 49. PCA.Anal
+ 50. PCA.Flip
+ 51. permanova_pairwise
+ 52. Plot.PairScatter
+ 53. PlotImpVar
+ 54. PlotOPLS.Imp
+ 55. PlotOPLS.MDL
+ 56. PlotOPLS.Permutation
+ 57. PlotOPLS.Splot
+ 58. PlotOPLS2DScore
+ 59. PlotPCA2DScore
+ 60. PlotPCA3DLoading
+ 61. PlotPCA3DScore
+ 62. PlotPCABiplot
+ 63. PlotPCALoading
+ 64. PlotPCAPairSummary
+ 65. PlotPCAScree
+ 66. PlotPLS.Classification
+ 67. PlotPLS.Imp
+ 68. PlotPLS.Permutation
+ 69. PlotPLS2DScore
+ 70. PlotPLS3DLoading
+ 71. PlotPLS3DScore
+ 72. PlotPLSBiplot
+ 73. PlotPLSLoading
+ 74. PlotPLSPairSummary
+ 75. PlotSPLS2DScore
+ 76. PlotSPLS3DLoading
+ 77. PlotSPLS3DScore
+ 78. PlotSPLSDA.Classification
+ 79. PlotSPLSLoading
+ 80. PlotSPLSPairSummary
+ 81. PLSDA.CV
+ 82. PLSDA.Permut
+ 83. PLSR.Anal
+ 84. prepare.oplsda.permut
+ 85. prepare.oplsr.anal
+ 86. prepare.splsr.anal
+ 87. save.oplsda.permut
+ 88. save.oplsr.anal
+ 89. save.splsr.anal
+ 90. SPLSR.Anal
+ 91. UpdateOPLS.Splot
+ 92. UpdatePCA.Loading
+ 93. UpdatePLS.Loading
+
+文件:  stats_classification.R 
+---------------------------- 
+  1. CreateLadder
+  2. GetRandomNumbers
+  3. GetRFConf.Table
+  4. GetRFConfColNames
+  5. GetRFConfMat
+  6. GetRFConfRowNames
+  7. GetRFOOB
+  8. GetRFSigColNames
+  9. GetRFSigMat
+ 10. GetRFSigRowNames
+ 11. GetSigTable.RF
+ 12. GetSigTable.SVM
+ 13. GetSVMSigColNames
+ 14. GetSVMSigMat
+ 15. GetSVMSigRowNames
+ 16. PlotConfusion
+ 17. PlotRF.Classify
+ 18. PlotRF.Outlier
+ 19. PlotRF.VIP
+ 20. PlotRSVM.Classification
+ 21. PlotRSVM.Cmpd
+ 22. RF.Anal
+ 23. RSVM
+ 24. RSVM.Anal
+
+文件:  stats_clustering.R 
+------------------------ 
+  1. colLab
+  2. FUN
+  3. GetAllKMClusterMembers
+  4. GetAllSOMClusterMembers
+  5. GetClassLabel
+  6. GetKMClusterMembers
+  7. GetSOMClusterMembers
+  8. GetXYCluster
+  9. Kmeans.Anal
+ 10. PlotClustPCA
+ 11. PlotHCTree
+ 12. PlotHeatMap
+ 13. PlotKmeans
+ 14. PlotSOM
+ 15. PlotStaticHeatMap
+ 16. PlotSubHeatMap
+ 17. scale_mat
+ 18. scale_rows
+ 19. SOM.Anal
+
+文件:  stats_correlations.R 
+-------------------------- 
+  1. ComputeCorrP
+  2. ComputeDSPC
+  3. error
+  4. FeatureCorrelation
+  5. GenerateTemplates
+  6. GetCorrSigFileName
+  7. GetCorSigColNames
+  8. GetCorSigMat
+  9. GetCorSigRowNames
+ 10. GetSigTable.Corr
+ 11. KendallCorrFunc
+ 12. Match.Pattern
+ 13. PearsonCorrFunc
+ 14. PlotCorr
+ 15. PlotCorrHeatMap
+ 16. PlotStaticCorrHeatMap
+ 17. SpearmanCorrFunc
+ 18. template.match
+ 19. template.pmatch
+
+文件:  stats_opls.R 
+------------------ 
+  1. coreOPLS
+  2. errorF
+  3. perform_opls
+  4. similarityF
+
+文件:  stats_peaks.R 
+------------------- 
+  1. GroupPeakList
+  2. SetPeakList.GroupValues
+
+文件:  stats_plot3d.R 
+-------------------- 
+  1. Plot3D
+  2. PlotPCA3DScoreImg
+  3. PlotPLS3DScoreImg
+  4. PlotSPLS3DScoreImg
+
+文件:  stats_sigfeatures.R 
+------------------------- 
+  1. EBAM.Init
+  2. GetEBAMSigColNames
+  3. GetEBAMSigMat
+  4. GetEBAMSigRowNames
+  5. GetEBAMSuggestedA0
+  6. GetSAMDeltaRange
+  7. GetSAMSigColNames
+  8. GetSAMSigMat
+  9. GetSAMSigRowNames
+ 10. GetSigTable.EBAM
+ 11. GetSigTable.SAM
+ 12. GetSuggestedSAMDelta
+ 13. my.fun
+ 14. PlotEBAM.Cmpd
+ 15. PlotSAM.Cmpd
+ 16. PlotSAM.FDR
+ 17. prepare.ebam.cmpd
+ 18. prepare.ebam.init
+ 19. prepare.sam.anal
+ 20. prepare.sam.cmpd
+ 21. SAM.Anal
+ 22. save.ebam.init
+ 23. save.sam.anal
+
+文件:  stats_spls.R 
+------------------ 
+  1. centroids.fun
+  2. Check.entry.pls
+  3. Check.entry.single
+  4. cov2
+  5. defl.select
+  6. deflation
+  7. explained_variance
+  8. fonction.j.folds
+  9. g
+ 10. get.BER
+ 11. get.confusion_matrix
+ 12. get.name.and.value
+ 13. internal_mint.block
+ 14. internal_predict.DA
+ 15. internal_wrapper.mint
+ 16. l2.norm
+ 17. logratio.transfo
+ 18. map
+ 19. MCVfold.splsda
+ 20. mean_centering_per_study
+ 21. miscrossprod
+ 22. perf.splsda
+ 23. predict.spls
+ 24. scale.function
+ 25. selectVar
+ 26. shave.matlist
+ 27. shave.veclist
+ 28. soft_thresholding_L1
+ 29. sparse.mint.block_iteration
+ 30. sparsity
+ 31. splsda
+ 32. Sr.fun
+ 33. stratified.subsampling
+ 34. study_split
+ 35. unmap
+
+文件:  stats_univariates.R 
+------------------------- 
+  1. ANOVA.Anal
+  2. aof
+  3. Calculate.ANOVA.posthoc
+  4. ContainInfiniteTT
+  5. ContainInfiniteVolcano
+  6. FC.Anal
+  7. FisherLSD
+  8. get.ftest.res
+  9. get.ttest.res
+ 10. GetAnovaCmpds
+ 11. GetAnovaDnMat
+ 12. GetAnovaSigFileName
+ 13. GetAnovaUpMat
+ 14. GetAovDnIDs
+ 15. GetAovPostHocSig
+ 16. GetAovSigColNames
+ 17. GetAovSigMat
+ 18. GetAovSigNum
+ 19. GetAovSigRowNames
+ 20. GetAovUpIDs
+ 21. GetFC
+ 22. GetFCSigColNames
+ 23. GetFcSigDnIDs
+ 24. GetFcSigDnMat
+ 25. GetFCSigMat
+ 26. GetFCSigRowNames
+ 27. GetFcSigUpIDs
+ 28. GetFcSigUpMat
+ 29. GetFcUnsigIDs
+ 30. GetFcUnsigMat
+ 31. GetFtestRes
+ 32. GetSigTable.Anova
+ 33. GetSigTable.FC
+ 34. GetSigTable.TT
+ 35. GetSigTable.Volcano
+ 36. GetTopInx
+ 37. GetTtCmpds
+ 38. GetTtDnIDs
+ 39. GetTtDnMat
+ 40. GetTtestRes
+ 41. GetTtestSigFileName
+ 42. GetTTSigColNames
+ 43. GetTTSigMat
+ 44. GetTTSigRowNames
+ 45. GetTtUpIDs
+ 46. GetTtUpMat
+ 47. GetUnivReport
+ 48. GetVolcanoAllColNames
+ 49. GetVolcanoAllMat
+ 50. GetVolcanoAllRowNames
+ 51. GetVolcanoCmpds
+ 52. GetVolcanoDnIDs
+ 53. GetVolcanoDnMat
+ 54. GetVolcanoSigColNames
+ 55. GetVolcanoSigMat
+ 56. GetVolcanoSigRowNames
+ 57. GetVolcanoUpLftIDs
+ 58. GetVolcanoUpLftMat
+ 59. GetVolcanoUpRgtIDs
+ 60. GetVolcanoUpRgtMat
+ 61. kwtest
+ 62. my.fun
+ 63. parseFisher
+ 64. parseTukey
+ 65. PlotANOVA
+ 66. PlotCmpdView
+ 67. PlotFC
+ 68. PlotTT
+ 69. PlotVolcano
+ 70. Ttests.Anal
+ 71. univ.test.nonpar
+ 72. univ.test.par
+ 73. Volcano.Anal
+
+文件:  sweave_report_biomarker.R 
+------------------------------- 
+  1. CreateBiomarkerInputDoc
+  2. CreateBiomarkerIntr
+  3. CreateBiomarkerOverview
+  4. CreateBiomarkerRatioOverview
+  5. CreateBiomarkerRnwReport
+  6. CreateModelBiomarkersDoc
+  7. CreateMultiBiomarkersDoc
+  8. CreateRatioTable
+  9. CreateROCLabelsTable
+ 10. CreateUnivarBiomarkersDoc
+ 11. CreateUnivROCTable
+ 12. ROCPredSamplesTable
+
+文件:  sweave_report_enrichment.R 
+-------------------------------- 
+  1. CreateEnrichAnalDoc
+  2. CreateEnrichInputDoc
+  3. CreateEnrichIntr
+  4. CreateEnrichORAdoc
+  5. CreateEnrichOverview
+  6. CreateEnrichProcessDoc
+  7. CreateEnrichQEAdoc
+  8. CreateEnrichRnwReport
+  9. CreateEnrichSSPdoc
+
+文件:  sweave_report_integmex.R 
+------------------------------ 
+  1. CreateIntegPathwayAnalysisRnwReport
+  2. CreateIntegratedPathwayAnalInputDoc
+  3. CreateIntegratedPathwayAnalIntr
+  4. CreateIntegratedPathwayDoc
+  5. CreateIntegratedPathwayGeneMapTable
+  6. CreateIntegratedPathwayNameMapTable
+  7. CreateIntegratedPathwayResultsTable
+
+文件:  sweave_report_meta_analysis.R 
+----------------------------------- 
+  1. CreateMetaAnalysisDEdoc
+  2. CreateMetaAnalysisInputDoc
+  3. CreateMetaAnalysisIntr
+  4. CreateMetaAnalysisNORMdoc
+  5. CreateMetaAnalysisOutput
+  6. CreateMetaAnalysisOverview
+  7. CreateMetaAnalysisRnwReport
+  8. CreateMetaTable
+  9. CreateVennMetaTable
+
+文件:  sweave_report_metamummi.R 
+------------------------------- 
+  1. CreateGSEAAnalTable
+  2. CreateMetaAnalTable
+  3. CreateMetaMummichogInputDoc
+  4. CreateMetaMummichogIntro
+  5. CreateMetaMummichogResults
+  6. CreateMetaPathRnwReport
+  7. CreateMummichogAnalTable
+  8. CreateMummichogAnalysisDoc
+  9. CreateMummichogInputDoc
+ 10. CreateMummichogIntro
+ 11. CreateMummichogMetaAnalPathTable
+ 12. CreateMummichogMetaAnalReport
+ 13. CreateMummichogOverview
+
+文件:  sweave_report_mummichog.R 
+------------------------------- 
+  1. CreateGSEAAnalTable
+  2. CreateMetaAnalTable
+  3. CreateMummichogAnalTable
+  4. CreateMummichogAnalysisDoc
+  5. CreateMummichogInputDoc
+  6. CreateMummichogIntro
+  7. CreateMummichogOverview
+  8. CreateMummichogRnwReport
+
+文件:  sweave_report_network.R 
+----------------------------- 
+  1. CreateNetworkExplorerDoc
+  2. CreateNetworkExplorerInputDoc
+  3. CreateNetworkExplorerIntr
+  4. CreateNetworkExplorerOverview
+  5. CreateNetworkExplorerRnwReport
+  6. CreateNetworkGeneMapTable
+  7. CreateNetworkNameMapTable
+
+文件:  sweave_report_pathway.R 
+----------------------------- 
+  1. CreatePathAnalDoc
+  2. CreatePathInputDoc
+  3. CreatePathIntr
+  4. CreatePathProcessDoc
+  5. CreatePathResultDoc
+  6. CreatePathRnwReport
+
+文件:  sweave_report_power.R 
+--------------------------- 
+  1. CreatePowerAnalDoc
+  2. CreatePowerInputDoc
+  3. CreatePowerIntr
+  4. CreatePowerOverview
+  5. CreatePowerParametersDoc
+  6. CreatePowerRnwReport
+
+文件:  sweave_report_raw_spectra.R 
+--------------------------------- 
+  1. CreateBPI
+  2. createFeatureAnnoSum
+  3. createFeatureAnnotationSumTable
+  4. createFeatureCompoundSumTable
+  5. createFeatureEIC
+  6. createFeatureEICStats
+  7. CreateFeatureSum
+  8. createFeatureSumDoc
+  9. CreateIntensityStats
+ 10. CreatePCA
+ 11. CreatePCA3D
+ 12. CreateRawAnalDetails
+ 13. CreateRawAnalMethod
+ 14. CreateRawAnalysisRnwReport
+ 15. CreateRawAnalyworkflow
+ 16. CreateRawIntr
+ 17. createResSumText
+ 18. CreateSampleSum
+ 19. CreateSpectraInfoTable
+ 20. CreateSpectraIOdoc
+ 21. createSpectraSumDoc
+ 22. createSpectraSumTable
+ 23. createSpectraTIC
+ 24. CreateTIC
+
+文件:  sweave_report_stats.R 
+--------------------------- 
+  1. CreateAnalNullMsg
+  2. CreateANOVAdoc
+  3. CreateCorrDoc
+  4. CreateEBAMdoc
+  5. CreateHCdoc
+  6. CreateKMdoc
+  7. CreateOPLSDAdoc
+  8. CreatePCAdoc
+  9. CreatePLSdoc
+ 10. CreateRFdoc
+ 11. CreateSAMdoc
+ 12. CreateSOMdoc
+ 13. CreateSPLSDAdoc
+ 14. CreateStatIntr
+ 15. CreateStatIOdoc
+ 16. CreateStatRnwReport
+ 17. CreateSVMdoc
+ 18. CreateUNIVdoc
+ 19. InitStatAnalMode
+
+文件:  sweave_report_time.R 
+-------------------------- 
+  1. CreateAOV2doc
+  2. CreateASCAdoc
+  3. CreateCorAnalysis
+  4. CreateCorHeatmap
+  5. CreateCovAdj
+  6. CreateiPCAdoc
+  7. CreateMBdoc
+  8. CreateMetaOverview
+  9. CreateRandomForest
+ 10. CreateTimeSeriesAnalNullMsg
+ 11. CreateTimeSeriesIOdoc
+ 12. CreateTimeSeriesRnwReport
+ 13. InitTimeSeriesAnal
+
+文件:  sweave_reporter.R 
+----------------------- 
+  1. CreateFooter
+  2. CreateHeader
+  3. CreateNORMdoc
+  4. CreateRHistAppendix
+  5. CreateSummaryTable
+  6. PreparePDFReport
+  7. SaveCurrentSession
+
+文件:  tandem_ms.R 
+----------------- 
+  1. cancelMS2Job
+  2. convert2NLspec
+  3. createSLURMBash
+  4. DataUpdatefromInclusionList
+  5. DataUpdatefromInclusionListPro
+  6. FetchExampleMSP
+  7. finishsearchingjob
+  8. FUN
+  9. generateMS2dbOpt
+ 10. GetAllPrecMZRTs
+ 11. GetAllPrecMZs
+ 12. GetCountsOfIncludedIons
+ 13. GetIncludedPrecMZRTs
+ 14. GetIncludedPrecMZs
+ 15. GetMSMSCompoundNames_single
+ 16. GetMSMSDot_single
+ 17. GetMSMSFeatureLabel
+ 18. GetMSMSFormulas_single
+ 19. GetMSMSInchiKeys_single
+ 20. GetMSMSPrecMZvec_msp
+ 21. GetMSMSPrecMZvec_msp_min
+ 22. GetMSMSPrecs_single
+ 23. GetMSMSSimScores_single
+ 24. GetMSMSSmiles_single
+ 25. GetMSPSanityCheckMsg
+ 26. GetNonIncludedPrecMZRTs
+ 27. GetNonIncludedPrecMZs
+ 28. loadMS2ResultmSet
+ 29. msmsResClean
+ 30. performMS2searchBatch
+ 31. performMS2searchSingle
+ 32. plotMirror
+ 33. plotms2Mirror
+ 34. PlotMS2SummarySingle
+ 35. plotrawms2Mirror
+ 36. processMSMSupload
+ 37. readMgfSpectra
+ 38. readProgressSec
+ 39. SaintyCheckMSPfile
+ 40. saveCurrentSession
+ 41. saveParams4Processing
+ 42. Setcurrentmsmsidx
+ 43. setMS2DBOpt
+ 44. SummarizeCMPDResults
+ 45. Updatecurrentmsmsidx
+
+文件:  util_api.R 
+---------------- 
+  1. do.api.call
+  2. my.hyperscore.kegg
+  3. my.integ.kegg
+  4. my.kegg.plot
+  5. my.namemap.api
+  6. my.ora.kegg
+  7. my.pathway.qea
+  8. my.qea.kegg
+
+文件:  util_approx.R 
+------------------- 
+  1. my.approx.match
+
+文件:  util_batch.R 
+------------------ 
+  1. my.batch.correct
+
+文件:  util_compatibility.R 
+-------------------------- 
+  1. FUN
+  2. PerformMS1ResultsFormatting
+  3. PerformMS2ResultsFormatting
+
+文件:  util_fgsea.R 
+------------------ 
+  1. error
+  2. my.fgsea
+
+文件:  util_heatmap.R 
+-------------------- 
+  1. psea.heatmap.json
+
+文件:  util_lipid.R 
+------------------ 
+  1. my.clean.lipid
+
+文件:  util_listheatmap.R 
+------------------------ 
+  1. my.list.heatmap
+
+文件:  util_lsd.R 
+---------------- 
+  1. my.lsd.test
+  2. tapply.stat
+
+文件:  util_metabolon.R 
+---------------------- 
+  1. FUN
+  2. my.extract.metabolon.compounds
+  3. my.extract.metabolon.metafactors
+  4. my.read.metabolon.sheets
+  5. my.validate.metabolon.data
+  6. ReadXLSXsheetsInfo
+  7. ValidateMetaFactor2Level
+
+文件:  util_missing.R 
+-------------------- 
+  1. checkMissingBudget
+  2. colmin_fun
+  3. group_apply
+  4. mean_fun
+  5. median_fun
+  6. my.impute.missing
+  7. ReplaceMissingByLoD.grp
+  8. safe_lod
+
+文件:  util_multifac_mb_1d.R 
+--------------------------- 
+  1. my.time.mb.1d
+
+文件:  util_multifac_mb_2d.R 
+--------------------------- 
+  1. my.time.mb.2d
+
+文件:  util_multifac_mb_manova.R 
+------------------------------- 
+  1. my.time.mb.manova
+  2. tr
+
+文件:  util_mztab.R 
+------------------ 
+  1. my.parse.mztab
+
+文件:  util_nmdr.R 
+----------------- 
+  1. ListNMDRStudies
+  2. my.get.nmdr.data
+
+文件:  util_pcapair.R 
+-------------------- 
+  1. make_diag_panel
+  2. plotPCAPairSummaryMeta
+  3. upper_density_with_p
+
+文件:  util_peaks.R 
+------------------ 
+  1. descendMin
+  2. findEqualGreaterM
+  3. my.parse.peaklist
+  4. rectUnique
+
+文件:  util_plot3d.R 
+------------------- 
+  1. box3d
+  2. my.plot.scatter3d
+  3. mysegs
+  4. mytext
+  5. mytext2
+  6. plane3d
+  7. points3d
+  8. wall3d
+  9. xyz.convert
+
+文件:  util_psea.R 
+----------------- 
+  1. Compound_function_mzlist
+  2. CreateLibFromKEGG
+  3. fillpathways
+  4. GetMummichogMZHits
+  5. make_cpdlib
+  6. rda2list
+
+文件:  util_savedata.R 
+--------------------- 
+  1. FUN
+  2. my.save.data
+
+文件:  util_scatter3d.R 
+---------------------- 
+  1. ComputeEncasing
+  2. get.rdt.set
+  3. my.json.scatter
+  4. rgb_array_to_hex_array
+  5. rgb_to_hex
+  6. rgba_to_hex_opacity
+  7. scale_range
+  8. set.rdt.set
+
+文件:  util_sspa.R 
+----------------- 
+  1. cdfstat
+  2. checking
+  3. chisq
+  4. congrad
+  5. congradControl
+  6. deconvControl
+  7. define_EffectSizeRange
+  8. distribution
+  9. f
+ 10. findroot
+ 11. g
+ 12. G
+ 13. h
+ 14. midpoint
+ 15. nncg
+ 16. norm
+ 17. panel
+ 18. pdfstat
+ 19. predictpower
+ 20. pvalue
+ 21. sampleSize
+ 22. simpson
+ 23. SSPA_pilotData
+ 24. SSPA_plot
+ 25. t
+ 26. tikhonovControl
+ 27. trapezoidal
+ 28. trimbin
+ 29. validity
+
+文件:  util_univreport.R 
+----------------------- 
+  1. my.univ.report
+
+文件:  util_venndiagram.R 
+------------------------ 
+  1. my.plot.venn
+  2. printing
+
+文件:  util_volcano.R 
+-------------------- 
+  1. my.plot.volcano
+
+文件:  utils_enrichnet.R 
+----------------------- 
+  1. id2name
+  2. mumid2name
+  3. mumname2id
+  4. my.enrich.net
+  5. my.normalize
+  6. my.rescale
+  7. name2id
+  8. overlap_ratio
+  9. scale01
+
+================================================================================ 
+汇总统计
+================================================================================ 
+处理的R文件总数:  96 
+找到的函数总数:  1858 
+
+各文件函数数量:
+batch_effect_utils.R                    : 127 个函数
+biomarker_utils.R                       :  79 个函数
+depends_refs.R                          :  13 个函数
+dose_response_deanal.R                  :  16 个函数
+dose_response_general.R                 :  21 个函数
+dose_response_graphs.R                  :  10 个函数
+dose_response_utils.R                   :  32 个函数
+duplicates_estimates.R                  :   5 个函数
+enrich_graphics.R                       :  16 个函数
+enrich_integ.R                          :  30 个函数
+enrich_kegg.R                           :  17 个函数
+enrich_mset.R                           :  17 个函数
+enrich_name_match.R                     :  16 个函数
+enrich_path_graphics.R                  :  20 个函数
+enrich_path_stats.R                     :  19 个函数
+enrich_stats.R                          :  32 个函数
+gene_fun_utils.R                        :   4 个函数
+general_anot_utils.R                    :  19 个函数
+general_data_utils.R                    :  61 个函数
+general_lib_utils.R                     :  26 个函数
+general_misc_utils.R                    :  85 个函数
+general_norm_utils.R                    :  30 个函数
+general_proc_utils.R                    :  35 个函数
+generic_c_utils.R                       :   3 个函数
+meta_data_utils.R                       :  17 个函数
+meta_methods.R                          :  29 个函数
+meta_pathway.R                          :  44 个函数
+mgwas_data.R                            :  28 个函数
+mgwas_misc.R                            :   9 个函数
+mgwas_mr.R                              :  32 个函数
+mgwas_tr.R                              :  20 个函数
+multifac_asca_heatmap2.R                :  37 个函数
+multifac_covariate.R                    :  29 个函数
+multifac_mb.R                           :  15 个函数
+multifac_metadata.R                     :  20 个函数
+multifac_pca_anova2.R                   :  22 个函数
+networks_enrich.R                       :   8 个函数
+networks_view.R                         :  39 个函数
+others_lipomics.R                       :   4 个函数
+peaks_ms2fun.R                          :   4 个函数
+peaks_to_function.R                     :  79 个函数
+plotly_utils.R                          :  10 个函数
+power_utils.R                           :   6 个函数
+rpackage_config.R                       :   0 个函数
+spectra_processing.R                    :  76 个函数
+stats_chemometrics.R                    :  93 个函数
+stats_classification.R                  :  24 个函数
+stats_clustering.R                      :  19 个函数
+stats_correlations.R                    :  19 个函数
+stats_opls.R                            :   4 个函数
+stats_peaks.R                           :   2 个函数
+stats_plot3d.R                          :   4 个函数
+stats_sigfeatures.R                     :  23 个函数
+stats_spls.R                            :  35 个函数
+stats_univariates.R                     :  73 个函数
+sweave_report_biomarker.R               :  12 个函数
+sweave_report_enrichment.R              :   9 个函数
+sweave_report_integmex.R                :   7 个函数
+sweave_report_meta_analysis.R           :   9 个函数
+sweave_report_metamummi.R               :  13 个函数
+sweave_report_mummichog.R               :   8 个函数
+sweave_report_network.R                 :   7 个函数
+sweave_report_pathway.R                 :   6 个函数
+sweave_report_power.R                   :   6 个函数
+sweave_report_raw_spectra.R             :  24 个函数
+sweave_report_stats.R                   :  19 个函数
+sweave_report_time.R                    :  13 个函数
+sweave_reporter.R                       :   7 个函数
+tandem_ms.R                             :  45 个函数
+util_api.R                              :   8 个函数
+util_approx.R                           :   1 个函数
+util_batch.R                            :   1 个函数
+util_compatibility.R                    :   3 个函数
+util_fgsea.R                            :   2 个函数
+util_heatmap.R                          :   1 个函数
+util_lipid.R                            :   1 个函数
+util_listheatmap.R                      :   1 个函数
+util_lsd.R                              :   2 个函数
+util_metabolon.R                        :   7 个函数
+util_missing.R                          :   8 个函数
+util_multifac_mb_1d.R                   :   1 个函数
+util_multifac_mb_2d.R                   :   1 个函数
+util_multifac_mb_manova.R               :   2 个函数
+util_mztab.R                            :   1 个函数
+util_nmdr.R                             :   2 个函数
+util_pcapair.R                          :   3 个函数
+util_peaks.R                            :   4 个函数
+util_plot3d.R                           :   9 个函数
+util_psea.R                             :   6 个函数
+util_savedata.R                         :   2 个函数
+util_scatter3d.R                        :   8 个函数
+util_sspa.R                             :  29 个函数
+util_univreport.R                       :   1 个函数
+util_venndiagram.R                      :   2 个函数
+util_volcano.R                          :   1 个函数
+utils_enrichnet.R                       :   9 个函数
